@@ -26,7 +26,7 @@ export default class App extends Component {
     };
 
     for (const contact of this.state.contacts) {
-      if (data.name === contact.name) {
+      if (data.name.toLowerCase() === contact.name.toLowerCase()) {
         contactName = true;
       }
     }

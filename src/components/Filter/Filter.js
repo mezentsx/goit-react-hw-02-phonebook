@@ -1,27 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { nanoid } from 'nanoid';
 import s from './Filter.module.css';
 
-export default class Filter extends Component {
-  inputFilter = nanoid();
-
-  render() {
-    const { filter, onFilter } = this.props;
+const Filter = ({ filter, onFilter }) => {
+  const inputFilter = nanoid();
 
     return (
       <>
         <h3 className={s.title}>Find contacts by name</h3>
-        <label htmlFor={this.inputFilter} className={s.label}>
+        <label htmlFor={inputFilter} className={s.label}>
           <input
             type="text"
             name="filter"
             value={filter}
             onChange={onFilter}
-            id={this.inputFilter}
+            id={inputFilter}
             className={s.input}
           />
         </label>
       </>
-    );
-  }
-}
+    )
+};
+
+export default Filter;
