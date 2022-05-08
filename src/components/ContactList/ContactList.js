@@ -19,5 +19,5 @@ export default ContactList;
 
 ContactItem.propTypes = { 
   onDelete: PropTypes.func.isRequired,
-  contacts: PropTypes.object,
+  contacts: PropTypes.node,
 }
